@@ -6,11 +6,7 @@ ENV TZ Europe/Moscow
 RUN set -x && \
   apk update && \
   apk add squid && \
-  rm -f /var/cache/apk/*; \
-	deluser squid 2>/dev/null; \
-  delgroup squid 2>/dev/null; \
-	addgroup -S squid -g 3128 && \
-  adduser -S -u 3128 -G squid -g squid -H -D -s /bin/false -h /var/cache/squid squid
+  rm -f /var/cache/apk/*;
 
 VOLUME ["/var/cache/squid"]
 EXPOSE 3128/tcp
