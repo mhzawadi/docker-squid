@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM alpine:3.18
 
 ENV SQUID_CONFIG_FILE /etc/squid/squid.conf
 ENV TZ Europe/Moscow
