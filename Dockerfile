@@ -1,4 +1,5 @@
 FROM alpine:3.22
+LABEL org.opencontainers.image.authors="matt@horwood.biz"
 
 ENV SQUID_CONFIG_FILE /etc/squid/squid.conf
 ENV TZ Europe/Moscow
