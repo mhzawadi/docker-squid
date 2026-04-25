@@ -2,7 +2,7 @@ FROM alpine:3.23
 LABEL org.opencontainers.image.authors="matt@horwood.biz"
 
 ENV SQUID_CONFIG_FILE /etc/squid/squid.conf
-ENV TZ Europe/Moscow
+ENV TZ Europe/London
 
 RUN set -x && \
   apk update && \
