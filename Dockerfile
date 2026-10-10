@@ -1,4 +1,4 @@
-FROM alpine:3.23
+FROM alpine:3.24
 LABEL org.opencontainers.image.authors="matt@horwood.biz"
 
 ENV SQUID_CONFIG_FILE=/etc/squid/squid.conf
@@ -7,7 +7,8 @@ ENV TZ=Europe/London
 RUN set -x && \
   apk update && \
   apk add squid && \
-  rm -f /var/cache/apk/*;
+  rm -f /var/cache/apk/*; \
+  mkdir -p /var/cache/squid
 
 VOLUME ["/var/cache/squid"]
 EXPOSE 3128/tcp
